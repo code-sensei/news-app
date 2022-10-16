@@ -3,9 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Serve Application
-```
-npm start
-```
+To run application, please take the following steps:
+- Run `npm i` to install node packages
+- Run `npm start` to serve application
+- Navigate to `http://localhost:4200/`
 
 <!-- ## Development server
 
