@@ -1,0 +1,25 @@
+<app-navbar page="home"></app-navbar>
+<section class="top-headlines">
+    <app-headline
+        *ngFor="let headline of top_headlines"
+        [headline]="headline"
+        (open)="open_article($event)"
+    ></app-headline>
+</section>
+
+<!-- Recent News Secrtion -->
+<section class="recent-news">
+    <div class="section-header">
+        <p>Recent News</p>
+        <!-- <button>
+            Show More
+        </button> -->
+    </div>
+    <div class="recent-articles">
+        <app-article 
+            *ngFor="let article of all_articles" 
+            [article]="article" 
+            (open)="open_article(article)"
+        ></app-article>
+    </div>
+</section>

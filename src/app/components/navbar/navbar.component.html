@@ -1,0 +1,29 @@
+<nav 
+  *ngIf="title !== ''"
+  class="nav">
+    <div class="left">
+        <button 
+          (click)="go_back()"
+          *ngIf="title !== 'HOME'"
+        >
+            <img 
+                src="assets/icons/arrow-left-alt.svg" 
+                alt="back"
+                height="24px"
+                width="24px"
+            >
+        </button>
+        <h1>{{ title }}</h1>
+    </div>
+    <button 
+      (click)="page ==='home' ? to_bookmarks() : bookmark_article()"
+      *ngIf="page !== 'bookmarks'"
+    >
+        <img 
+            src="assets/icons/bookmark.svg" 
+            alt="bookmark"
+            height="24px"
+            width="24px"
+        >
+    </button>
+</nav>

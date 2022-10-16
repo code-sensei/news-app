@@ -1,0 +1,27 @@
+.top-headline {
+    @apply relative rounded-[8px] h-[250px] min-w-[350px] bg-light overflow-hidden;
+
+    .image-container {
+        @apply absolute h-[250px] w-[350px] top-0 bottom-0;
+
+        img {
+            @apply h-[250px] w-[350px] z-[1]
+        }
+    }
+
+    .content {
+        @apply absolute top-0 h-[250px] w-full max-w-[350px] bg-card-content z-[2] text-white p-[24px];
+
+        .category {
+            @apply bg-white text-white rounded-[8px] bg-opacity-20 w-[max-content] px-4 py-2 mb-10;
+        }
+
+        .title {
+            @apply text-headline-title h-[96px];
+        }
+
+        .learn-more {
+            @apply flex flex-row justify-start items-center gap-x-3 bottom-0;
+        }
+    }
+}

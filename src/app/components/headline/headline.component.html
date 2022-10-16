@@ -1,0 +1,20 @@
+<div class="top-headline" >
+    <div class="image-container">
+        <img [src]="headline?.urlToImage" alt="">
+    </div>
+    <div class="content">
+        <div class="category">
+            <p>{{ headline?.category ? headline?.category : 'Top Headline' }}</p>
+        </div>
+        <p class="title" *ngIf="headline.title.length > 60">
+            {{ headline?.title | slice:0:60 }}...
+        </p>
+        <p class="title" *ngIf="headline.title.length <= 60">
+            {{ headline?.title }}
+        </p>
+        <button class="learn-more" (click)="open_article()">
+            Learn more
+            <img src="assets/icons/arrow-right.svg" alt="">
+        </button>
+    </div>
+</div>

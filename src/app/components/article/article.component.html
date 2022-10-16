@@ -1,0 +1,42 @@
+<div class="card white article"
+    (click)="!canDelete && open_article()"
+>
+    <div class="content">
+        <div class="image"
+        (click)="open_article()">
+            <img [src]="article?.urlToImage" alt="">
+        </div>
+        <div class="text">
+            <div class="grid grid-cols-10 gap-x-2">
+                <p class="title"
+                (click)="open_article()" *ngIf="article?.title.length > 60">
+                    {{ article?.title | slice:0:60 }}...
+                </p>
+                <p class="title"
+                (click)="open_article()" *ngIf="article?.title.length <= 60">
+                    {{ article?.title }}
+                </p>
+                <button 
+                    *ngIf="canDelete"
+                    (click)="delete_bookmark(article)"
+                >
+                    <img 
+                        src="assets/icons/delete.svg" 
+                        alt="delete"
+                        height="24px"
+                        width="24px"
+                    >
+                </button>
+            </div>
+            <div class="source">
+                <p *ngIf="article?.title.length > 60">
+                    {{ article?.author | slice:0:60 }}...
+                </p>
+                <p *ngIf="article?.title.length <= 60">
+                    {{ article?.author }}
+                </p>
+                <p>{{ article?.source?.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

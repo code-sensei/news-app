@@ -1,0 +1,25 @@
+<app-navbar page="details" (bookmark)="bookmark_article()"></app-navbar>
+<section class="article-details">
+    <div class="content" *ngIf="article">
+        <img [src]="article?.urlToImage" alt="" class="mx-auto">
+        <div class="inner-content">
+            <h1>
+                {{ article?.title }}
+            </h1>
+            <div class="flex flex-row justify-between text-grey text-[14px]">
+                <p>
+                    By {{ article?.source?.name }}
+                </p>
+            </div>
+            <p class="text-main mt-3" [innerHTML]="article?.description"></p>
+        </div>
+    </div>
+    <div *ngIf="!article" class="h-[calc(100vh-180px)] w-full flex flex-col justify-center gap-y-6 items-center">
+        <h1 class="text-[40px]">Data Missing</h1>
+        <div class="bg-light rounded-[8px] p-[20px]">
+            <a [routerLink]="'/'">
+                Go Back Home
+            </a>
+        </div>
+    </div>
+</section>

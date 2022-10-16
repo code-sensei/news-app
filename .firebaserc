@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "newsly-4967f": {
+      "hosting": {
+        "news-app": [
+          "vendease-test-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "newsly-4967f"
+  }
+}

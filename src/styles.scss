@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    @apply font-main bg-background;
+    font-display: swap;
+}
+
+main {
+    @apply py-[40px] px-[20px] md:px-[5vw]
+}
+
+section {
+    @apply max-w-screen-2xl mx-auto;
+
+    &:first-of-type {
+        @apply mt-[50px]
+    }
+
+    &:not(:first-of-type) {
+        @apply mt-[20px]
+    }
+}
+
+button {
+    @apply min-h-[40px];
+
+    &[disabled] {
+        @apply opacity-50
+    }
+}
+
+img {
+    max-width: 100%;
+    @apply rounded-[8px]
+}
+
+input {
+    @apply h-[50px] w-[300px] rounded-[8px] px-4
+}
+
+.nav {
+    @apply flex flex-row absolute top-0 left-0 w-screen max-w-screen-2xl z-[12] 
+        justify-between text-main text-headline-title font-bold 
+        px-[20px] py-[15px] bg-white;
+
+    .left {
+        @apply flex flex-row gap-3 items-center
+    }
+}
+
+.card {
+    @apply w-full p-4 rounded-[8px] cursor-pointer;
+    
+    &.white {
+        @apply bg-white;
+    }
+
+    .title {
+        @apply text-[14px] text-main
+    }
+}
+
+.section-header {
+    @apply flex flex-row justify-between items-center mb-2;
+
+    p {
+        @apply text-main;
+    }
+
+    button {
+        @apply text-grey
+    }
+}

@@ -1,0 +1,7 @@
+.bookmarks {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.n-data {
+    @apply min-h-[calc(100vh-100px)] flex flex-col justify-center items-center
+}

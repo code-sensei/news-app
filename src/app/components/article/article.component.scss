@@ -1,0 +1,30 @@
+.article {
+
+    .content {
+        @apply grid grid-cols-4 gap-x-2;
+
+        .image {
+            @apply col-span-1;
+
+            img {
+                @apply rounded-[8px] aspect-square h-[70px] w-[70px];
+            }
+        }
+
+        .text {
+            @apply col-span-3 flex flex-col justify-between items-start;
+
+            .title {
+                @apply col-span-9;
+            }
+
+            button {
+                @apply flex flex-col justify-start;
+            }
+
+            .source {
+                @apply flex flex-row justify-between items-center text-[12px] text-grey;
+            }
+        }
+    }
+}

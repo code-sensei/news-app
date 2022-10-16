@@ -1,0 +1,15 @@
+<app-navbar page="bookmarks"></app-navbar>
+<section class="bookmarks" *ngIf="bookmarks.length > 0">
+    <app-article
+        *ngFor="let bookmark of bookmarks"
+        [article]="bookmark"
+        (open)="open_bookmark(bookmark)"
+        (delete)="delete_bookmark($event)"
+        [canDelete]="true"
+    ></app-article>
+</section>
+<section class="no-data" *ngIf="!bookmarks || bookmarks == null || bookmarks.length === 0">
+    <h1 class="text-headline-title text-main text-[30px] text-center">
+        No Bookmarks Found
+    </h1>
+</section>
